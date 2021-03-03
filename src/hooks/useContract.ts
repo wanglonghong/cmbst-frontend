@@ -5,12 +5,12 @@ import useWeb3 from 'hooks/useWeb3'
 import {
   getAddress,
   getMasterChefAddress,
-  getCakeAddress,
+  getCombustAddress,
   getLotteryAddress,
   getLotteryTicketAddress,
   getBunnyFactoryAddress,
-  getPancakeProfileAddress,
-  getPancakeRabbitsAddress,
+  getCombustProfileAddress,
+  getCombustRabbitsAddress,
   getPointCenterIfoAddress,
   getBunnySpecialAddress,
 } from 'utils/addressHelpers'
@@ -19,13 +19,13 @@ import { PoolCategory } from 'config/constants/types'
 import ifo from 'config/abi/ifo.json'
 import erc20 from 'config/abi/erc20.json'
 import bunnyFactory from 'config/abi/bunnyFactory.json'
-import pancakeRabbits from 'config/abi/pancakeRabbits.json'
+import combustRabbits from 'config/abi/combustRabbits.json'
 import lottery from 'config/abi/lottery.json'
 import lotteryTicket from 'config/abi/lotteryNft.json'
 import masterChef from 'config/abi/masterchef.json'
 import sousChef from 'config/abi/sousChef.json'
 import sousChefBnb from 'config/abi/sousChefBnb.json'
-import profile from 'config/abi/pancakeProfile.json'
+import profile from 'config/abi/combustProfile.json'
 import pointCenterIfo from 'config/abi/pointCenterIfo.json'
 import bunnySpecial from 'config/abi/bunnySpecial.json'
 
@@ -55,7 +55,7 @@ export const useERC20 = (address: string) => {
 }
 
 export const useCake = () => {
-  return useERC20(getCakeAddress())
+  return useERC20(getCombustAddress())
 }
 
 export const useBunnyFactory = () => {
@@ -63,14 +63,14 @@ export const useBunnyFactory = () => {
   return useContract(bunnyFactoryAbi, getBunnyFactoryAddress())
 }
 
-export const usePancakeRabbits = () => {
-  const pancakeRabbitsAbi = (pancakeRabbits as unknown) as AbiItem
-  return useContract(pancakeRabbitsAbi, getPancakeRabbitsAddress())
+export const useCombustRabbits = () => {
+  const combustRabbitsAbi = (combustRabbits as unknown) as AbiItem
+  return useContract(combustRabbitsAbi, getCombustRabbitsAddress())
 }
 
 export const useProfile = () => {
   const profileABIAbi = (profile as unknown) as AbiItem
-  return useContract(profileABIAbi, getPancakeProfileAddress())
+  return useContract(profileABIAbi, getCombustProfileAddress())
 }
 
 export const useLottery = () => {

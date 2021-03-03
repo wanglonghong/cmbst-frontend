@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from '@zealous4467/cmbstswapuikit'
 import { NavLink } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
@@ -51,7 +51,7 @@ const EarnAPYCard = () => {
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
           apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
-        } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
+        } else if (farm.quoteTokenSymbol === QuoteToken.COMBUST) {
           apy = cakeRewardPerYear.div(farm.lpTotalInQuoteToken)
         } else if (farm.dual) {
           const cakeApy =

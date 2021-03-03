@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import orderBy from 'lodash/orderBy'
-import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@zealous4467/cmbstswapuikit'
 import { NavLink } from 'react-router-dom'
 import pools from 'config/constants/pools'
 import { Pool } from 'state/types'
@@ -22,8 +22,8 @@ const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
 const EarnAssetCard = () => {
   const activeNonCakePools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('CAKE'))
   const latestPools: Pool[] = orderBy(activeNonCakePools, ['sortOrder', 'pid'], ['desc', 'desc']).slice(0, 3)
-  // Always include CAKE
-  const assets = ['CAKE', ...latestPools.map((pool) => pool.tokenName)].join(', ')
+  // Always include COMBUST
+  const assets = 'COMBUST'  
 
   return (
     <StyledFarmStakingCard>
@@ -36,7 +36,7 @@ const EarnAssetCard = () => {
           <Heading color="contrast" size="lg">
             in Pools
           </Heading>
-          <NavLink exact activeClassName="active" to="/syrup" id="pool-cta">
+          <NavLink exact activeClassName="active" to="/ash" id="pool-cta">
             <ArrowForwardIcon mt={30} color="primary" />
           </NavLink>
         </Flex>

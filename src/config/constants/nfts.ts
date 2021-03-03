@@ -109,7 +109,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Drizzle',
-    description: "It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?",
+    description: "It's raining ash on this bunny, but he doesn't seem to mind. Can you blame him?",
     images: {
       lg: 'drizzle-lg.png',
       md: 'drizzle-md.png',
@@ -148,7 +148,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Sparkle',
-    description: 'It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.',
+    description: 'It’s sparkling ash, pancakes, and even lottery tickets! This bunny really loves it.',
     images: {
       lg: 'sparkle-lg.png',
       md: 'sparkle-md.png',

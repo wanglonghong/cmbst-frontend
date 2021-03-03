@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react'
 import BigNumber from 'bignumber.js'
 import { kebabCase } from 'lodash'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Toast, toastTypes } from '@pancakeswap-libs/uikit'
+import { Toast, toastTypes } from '@zealous4467/cmbstswapuikit'
 import { useSelector, useDispatch } from 'react-redux'
 import { Team } from 'config/constants/types'
 import useRefresh from 'hooks/useRefresh'
@@ -45,7 +45,7 @@ export const useFarmFromPid = (pid): Farm => {
 export const useFarmFromSymbol = (lpSymbol: string): Farm => {
   const farm = useSelector((state: State) => state.farms.data.find((f) => f.lpSymbol === lpSymbol))
   return farm
-}
+}  
 
 export const useFarmUser = (pid) => {
   const farm = useFarmFromPid(pid)
@@ -87,17 +87,18 @@ export const usePriceBnbBusd = (): BigNumber => {
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
-  const pid = 1 // CAKE-BNB LP
+  const pid = 1 // CMBST-BNB LP
   const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
   return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceEthBusd = (): BigNumber => {
-  const pid = 14 // ETH-BNB LP
-  const bnbPriceUSD = usePriceBnbBusd()
-  const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+  // const pid = 14 // ETH-BNB LP
+  // const bnbPriceUSD = usePriceBnbBusd()
+  // const farm = useFarmFromPid(pid)
+  // return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+  return new BigNumber(1)
 }
 
 export const usePriceEthBnb = (): BigNumber => {

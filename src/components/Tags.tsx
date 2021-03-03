@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from '@pancakeswap-libs/uikit'
+import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from '@zealous4467/cmbstswapuikit'
 
 const CoreTag = () => (
   <Tag variant="secondary" outline startIcon={<VerifiedIcon />}>

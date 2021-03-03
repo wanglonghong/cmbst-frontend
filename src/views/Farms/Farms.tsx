@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { Image, Heading } from '@pancakeswap-libs/uikit'
+import { Image, Heading } from '@zealous4467/cmbstswapuikit'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -61,7 +61,7 @@ const Farms: React.FC = () => {
           apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
         } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
           apy = cakePrice.div(ethPriceUsd).times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken)
-        } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
+        } else if (farm.quoteTokenSymbol === QuoteToken.COMBUST) {
           apy = cakeRewardPerYear.div(farm.lpTotalInQuoteToken)
         } else if (farm.dual) {
           const cakeApy =
@@ -97,7 +97,7 @@ const Farms: React.FC = () => {
   return (
     <Page>
       <Heading as="h1" size="lg" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        {TranslateString(696, 'Stake LP tokens to earn CAKE')}
+        {TranslateString(696, 'Stake LP tokens to earn COMBUST')}
       </Heading>
       <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <div>

@@ -8,12 +8,12 @@
       },
       {
         "internalType": "contract IBEP20",
-        "name": "_cakeToken",
+        "name": "_combustToken",
         "type": "address"
       },
       {
-        "internalType": "contract IPancakeProfile",
-        "name": "_pancakeProfile",
+        "internalType": "contract CombustProfile",
+        "name": "_combustProfile",
         "type": "address"
       },
       {
@@ -43,7 +43,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "costCake",
+        "name": "costCombust",
         "type": "uint256"
       }
     ],
@@ -68,7 +68,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "costCake",
+        "name": "costCombust",
         "type": "uint256"
       },
       {
@@ -144,7 +144,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_cakeCost",
+        "name": "_combustCost",
         "type": "uint256"
       }
     ],
@@ -175,7 +175,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "cakeCost",
+        "name": "combustCost",
         "type": "uint256"
       },
       {
@@ -198,32 +198,6 @@
     "outputs": [
       {
         "internalType": "contract BunnyMintingStation",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "c__0xf318aee2",
-        "type": "bytes32"
-      }
-    ],
-    "name": "c_0xf318aee2",
-    "outputs": [],
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "cakeToken",
-    "outputs": [
-      {
-        "internalType": "contract IBEP20",
         "name": "",
         "type": "address"
       }
@@ -290,6 +264,32 @@
     "name": "claimFee",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "combustProfile",
+    "outputs": [
+      {
+        "internalType": "contract CombustProfile",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "combustToken",
+    "outputs": [
+      {
+        "internalType": "contract IBEP20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -370,19 +370,6 @@
   },
   {
     "inputs": [],
-    "name": "pancakeProfile",
-    "outputs": [
-      {
-        "internalType": "contract IPancakeProfile",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "renounceOwnership",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -415,7 +402,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_cakeCost",
+        "name": "_combustCost",
         "type": "uint256"
       },
       {

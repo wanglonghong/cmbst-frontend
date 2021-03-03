@@ -3,7 +3,7 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading } from '@pancakeswap-libs/uikit'
+import { Heading } from '@zealous4467/cmbstswapuikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -26,7 +26,8 @@ const Farm: React.FC = () => {
   const farms = useFarms()
   const pools = usePools(account)
   const bnbPriceUSD = usePriceBnbBusd()
-  const ethPriceBnb = usePriceEthBnb()
+  // const ethPriceBnb = usePriceEthBnb()
+  const ethPriceBnb = 1
   const block = useBlock()
   const [stackedOnly, setStackedOnly] = useState(false)
 
@@ -81,15 +82,15 @@ const Farm: React.FC = () => {
       <Hero>
         <div>
           <Heading as="h1" size="xxl" mb="16px">
-            {TranslateString(738, 'Syrup Pool')}
+            {TranslateString(738, 'Ash Pool')}
           </Heading>
           <ul>
-            <li>{TranslateString(580, 'Stake CAKE to earn new tokens.')}</li>
+            <li>{TranslateString(580, 'Stake COMBUST to earn new tokens.')}</li>
             <li>{TranslateString(486, 'You can unstake at any time.')}</li>
             <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
           </ul>
         </div>
-        <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
+        <img src="/images/ash.png" alt="ASH POOL icon" width={410} height={191} />
       </Hero>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <Divider />

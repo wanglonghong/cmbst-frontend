@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Web3 from 'web3'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Button, Input, Modal, Text } from '@pancakeswap-libs/uikit'
+import { Button, Input, Modal, Text } from '@zealous4467/cmbstswapuikit'
 import { useToast } from 'state/hooks'
 import { Nft } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
-import { usePancakeRabbits } from 'hooks/useContract'
+import { useCombustRabbits } from 'hooks/useContract'
 import InfoRow from './InfoRow'
 
 interface TransferNftModalProps {
@@ -43,7 +43,7 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
   const [error, setError] = useState(null)
   const TranslateString = useI18n()
   const { account } = useWallet()
-  const pancakeRabbitsContract = usePancakeRabbits()
+  const combustRabbitsContract = useCombustRabbits()
   const { toastSuccess } = useToast()
 
   const handleConfirm = async () => {
@@ -53,7 +53,7 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
       if (!isValidAddress) {
         setError(TranslateString(999, 'Please enter a valid wallet address'))
       } else {
-        await pancakeRabbitsContract.methods
+        await combustRabbitsContract.methods
           .transferFrom(account, value, tokenIds[0])
           .send({ from: account })
           .on('sending', () => {

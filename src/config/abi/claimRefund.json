@@ -3,17 +3,17 @@
     "inputs": [
       {
         "internalType": "contract IBEP20",
-        "name": "_cakeToken",
+        "name": "_combustToken",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "_pancakeProfileAddress",
+        "name": "_combustProfileAddress",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "_numberCake",
+        "name": "_numberCombust",
         "type": "uint256"
       },
       {
@@ -43,19 +43,6 @@
     ],
     "name": "OwnershipTransferred",
     "type": "event"
-  },
-  {
-    "inputs": [],
-    "name": "cakeToken",
-    "outputs": [
-      {
-        "internalType": "contract IBEP20",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
   },
   {
     "inputs": [
@@ -91,7 +78,20 @@
   },
   {
     "inputs": [],
-    "name": "getCakeBack",
+    "name": "combustToken",
+    "outputs": [
+      {
+        "internalType": "contract IBEP20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getCombustBack",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -117,7 +117,7 @@
   },
   {
     "inputs": [],
-    "name": "numberCake",
+    "name": "numberCombust",
     "outputs": [
       {
         "internalType": "uint256",

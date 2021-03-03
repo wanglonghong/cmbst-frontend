@@ -1,6 +1,7 @@
-import { getPancakeProfileAddress, getPancakeRabbitsAddress } from 'utils/addressHelpers'
-import pancakeProfileAbi from 'config/abi/pancakeProfile.json'
-import pancakeRabbitsAbi from 'config/abi/pancakeRabbits.json'
+import Cookies from 'js-cookie'
+import { getCombustProfileAddress, getCombustRabbitsAddress } from 'utils/addressHelpers'
+import combustProfileAbi from 'config/abi/combustProfile.json'
+import combustRabbitsAbi from 'config/abi/combustRabbits.json'
 import { Nft } from 'config/constants/types'
 import { getContract } from 'utils/web3'
 import { Profile } from 'state/types'
@@ -8,8 +9,8 @@ import { getTeam } from 'state/teams/helpers'
 import nfts from 'config/constants/nfts'
 import { transformProfileResponse } from './helpers'
 
-const profileContract = getContract(pancakeProfileAbi, getPancakeProfileAddress())
-const rabbitContract = getContract(pancakeRabbitsAbi, getPancakeRabbitsAddress())
+const profileContract = getContract(combustProfileAbi, getCombustProfileAddress())
+const rabbitContract = getContract(combustRabbitsAbi, getCombustRabbitsAddress())
 const profileApi = process.env.REACT_APP_API_PROFILE
 
 export interface GetProfileResponse {
@@ -53,13 +54,14 @@ const getProfile = async (address: string): Promise<GetProfileResponse> => {
       const bunnyId = await rabbitContract.methods.getBunnyId(tokenId).call()
       nft = nfts.find((nftItem) => nftItem.bunnyId === Number(bunnyId))
 
-      // Save the preview image to local storage for the exchange
-      localStorage.setItem(
+      // Save the preview image in a cookie so it can be used on the exchange
+      Cookies.set(
         `profile_${address}`,
-        JSON.stringify({
+        {
           username,
           avatar: `https://pancakeswap.finance/images/nfts/${nft.images.sm}`,
-        }),
+        },
+        { domain: 'pancakeswap.finance', secure: true, expires: 30 },
       )
     }
 

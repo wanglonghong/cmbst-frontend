@@ -12,7 +12,6 @@ export const useApprove = (lpContract: Contract) => {
   const dispatch = useDispatch()
   const { account }: { account: string } = useWallet()
   const masterChefContract = useMasterchef()
-
   const handleApprove = useCallback(async () => {
     try {
       const tx = await approve(lpContract, masterChefContract, account)

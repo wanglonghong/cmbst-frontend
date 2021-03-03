@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { useModal } from '@pancakeswap-libs/uikit'
+import { useModal } from '@zealous4467/cmbstswapuikit'
 import useGetBullHiccupClaimableStatus from '../hooks/useGetBullHiccupClaimableStatus'
 import ClaimBullHiccupNftModal from './ClaimBullHiccupNftModal'
 

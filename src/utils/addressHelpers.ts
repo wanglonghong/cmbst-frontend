@@ -7,8 +7,8 @@ export const getAddress = (address: Address): string => {
   return address[chainId] ? address[chainId] : address[mainNetChainId]
 }
 
-export const getCakeAddress = () => {
-  return getAddress(addresses.cake)
+export const getCombustAddress = () => {
+  return getAddress(addresses.combust)
 }
 export const getMasterChefAddress = () => {
   return getAddress(addresses.masterChef)
@@ -25,11 +25,11 @@ export const getLotteryAddress = () => {
 export const getLotteryTicketAddress = () => {
   return getAddress(addresses.lotteryNFT)
 }
-export const getPancakeProfileAddress = () => {
-  return getAddress(addresses.pancakeProfile)
+export const getCombustProfileAddress = () => {
+  return getAddress(addresses.combustProfile)
 }
-export const getPancakeRabbitsAddress = () => {
-  return getAddress(addresses.pancakeRabbits)
+export const getCombustRabbitsAddress = () => {
+  return getAddress(addresses.combustRabbits)
 }
 export const getBunnyFactoryAddress = () => {
   return getAddress(addresses.bunnyFactory)

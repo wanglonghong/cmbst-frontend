@@ -13,7 +13,7 @@
       },
       {
         "internalType": "contract IBEP20",
-        "name": "_cakeToken",
+        "name": "_combustToken",
         "type": "address"
       },
       {
@@ -106,19 +106,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "cakeToken",
-    "outputs": [
-      {
-        "internalType": "contract IBEP20",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -148,6 +135,19 @@
     "name": "claimFee",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "combustToken",
+    "outputs": [
+      {
+        "internalType": "contract IBEP20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {

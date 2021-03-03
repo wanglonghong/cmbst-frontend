@@ -58,7 +58,7 @@ export const getFarms = (data) => {
       lpSymbol: farm.lp_symbol,
       lpAddresses: {
         56: farm.lp_mainnet_address,
-        97: '0xE66790075ad839978fEBa15D4d8bB2b415556a1D',
+        97: '0xa6a92904ce234d1773a366f435a65981d19c4b6b',
       },
       tokenSymbol: farm?.token?.symbol,
       tokenAddresses: {

@@ -1,18 +1,18 @@
 export default {
-  cake: {
-    97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+  combust: {
+    97: '0x5d3a2568c4079eeada9aaa6cbfc5eeea2bfcfa79',
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
   },
-  syrup: {
-    97: '0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9',
+  ash: {
+    97: '0x03b05d3C6faB69B7629615E01145272Ee2b55906',
     56: '0x009cF7bC57584b7998236eff51b98A168DceA9B0',
   },
   masterChef: {
-    97: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
+    97: '0xe28A04E160AF2E608352090AA7347D8E947d944e',
     56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
   },
   sousChef: {
-    97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+    97: '0x2ac53e26757A302154108703b3c6BaAd967c516e',
     56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
   },
   wbnb: {
@@ -33,23 +33,23 @@ export default {
   },
   busd: {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-    97: '',
+    97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee',
   },
   ust: {
     56: '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
-    97: '',
+    97: '0x66BDf3Bd407A63eAB5eAF5eCE69f2D7bb403EfC9',
   },
-  pancakeProfile: {
+  combustProfile: {
     56: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
-    97: '0x4B683C7E13B6d5D7fd1FeA9530F451954c1A7c8A',
+    97: '0xa4edf58f16b8c3613368a34f05b87728942d98f3',
   },
-  pancakeRabbits: {
+  combustRabbits: {
     56: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
-    97: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
+    97: '0x040e9fa2f8c156960e2f4784b84e56f383643d93',
   },
   bunnyFactory: {
     56: '0xfa249Caa1D16f75fa159F7DFBAc0cC5EaB48CeFf',
-    97: '0x707CBF373175fdB601D34eeBF2Cf665d08f01148',
+    97: '0x4585c7b6959ad4adb61436368a1fe44238e69d85',
   },
   eth: {
     56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
@@ -57,14 +57,15 @@ export default {
   },
   claimRefund: {
     56: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149',
-    97: '',
+    97: '0x1caa16d8517d3b0839701da725629cb6e5679970',
   },
   pointCenterIfo: {
     56: '0x3C6919b132462C1FEc572c6300E83191f4F0012a',
-    97: '0xd2Ac1B1728Bb1C11ae02AB6e75B76Ae41A2997e3',
+    97: '0xf03e11d08d48cb7da196a09cdec3e56f57db35e3',
   },
   bunnySpecial: {
     56: '0xFee8A195570a18461146F401d6033f5ab3380849',
-    97: '0x7b7b1583De1DeB32Ce6605F6deEbF24A0671c17C',
+    97: '0xa9dd241051f3b9f46a55ffda3c897d8fb30cd3e8',
   },
-}
+}  
+ 

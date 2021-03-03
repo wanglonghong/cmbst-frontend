@@ -9,6 +9,7 @@ const fetchFarms = async () => {
   const data = await Promise.all(
     farmsConfig.map(async (farmConfig) => {
       const lpAdress = getAddress(farmConfig.lpAddresses)
+
       const calls = [
         // Balance of token in the LP contract
         {

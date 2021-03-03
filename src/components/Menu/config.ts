@@ -1,4 +1,4 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from '@zealous4467/cmbstswapuikit'
 
 const config: MenuEntry[] = [
   {
@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance',
+        href: 'https://exchange.combust.finance',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool',
+        href: 'https://exchange.combust.finance/#/pool',
       },
     ],
   },
@@ -31,80 +31,24 @@ const config: MenuEntry[] = [
     href: '/pools',
   },
   {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: '/lottery',
-  },
-  {
-    label: 'Collectibles',
-    icon: 'NftIcon',
-    href: '/collectibles',
-  },
-  {
-    label: 'Teams & Profile',
-    icon: 'GroupsIcon',
-    calloutClass: 'rainbow',
-    items: [
-      {
-        label: 'Leaderboard',
-        href: '/teams',
-      },
-      {
-        label: 'Task Center',
-        href: '/profile/tasks',
-      },
-      {
-        label: 'Your Profile',
-        href: '/profile',
-      },
-    ],
-  },
-  {
-    label: 'Info',
-    icon: 'InfoIcon',
-    items: [
-      {
-        label: 'Overview',
-        href: 'https://pancakeswap.info',
-      },
-      {
-        label: 'Tokens',
-        href: 'https://pancakeswap.info/tokens',
-      },
-      {
-        label: 'Pairs',
-        href: 'https://pancakeswap.info/pairs',
-      },
-      {
-        label: 'Accounts',
-        href: 'https://pancakeswap.info/accounts',
-      },
-    ],
-  },
-  {
-    label: 'IFO',
-    icon: 'IfoIcon',
-    href: '/ifo',
-  },
-  {
     label: 'More',
     icon: 'MoreIcon',
     items: [
       {
         label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
+        href: 'https://voting.combust.finance',
       },
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: 'https://github.com/combustswap',
       },
       {
         label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
+        href: 'https://docs.combustswap.finance',
       },
       {
         label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
+        href: 'https://combustswap.medium.com',
       },
     ],
   },

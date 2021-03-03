@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
-import { Flex, Text, Skeleton } from '@pancakeswap-libs/uikit'
+import { Flex, Text, Skeleton } from '@zealous4467/cmbstswapuikit'
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
@@ -110,7 +110,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     if (farm.quoteTokenSymbol === QuoteToken.BNB) {
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
-    if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
+    if (farm.quoteTokenSymbol === QuoteToken.COMBUST) {
       return cakePrice.times(farm.lpTotalInQuoteToken)
     }
     if (farm.quoteTokenSymbol === QuoteToken.ETH) {
@@ -124,7 +124,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     : '-'
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
-  const earnLabel = farm.dual ? farm.dual.earnLabel : 'CAKE'
+  const earnLabel = farm.dual ? farm.dual.earnLabel : 'COMBUST'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
 
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm

@@ -7,11 +7,13 @@ import { getAddress, getMasterChefAddress } from 'utils/addressHelpers'
 
 export const fetchFarmUserAllowances = async (account: string) => {
   const masterChefAdress = getMasterChefAddress()
+  
 
   const calls = farmsConfig.map((farm) => {
     const lpContractAddress = getAddress(farm.lpAddresses)
     return { address: lpContractAddress, name: 'allowance', params: [account, masterChefAdress] }
   })
+
 
   const rawLpAllowances = await multicall(erc20ABI, calls)
   const parsedLpAllowances = rawLpAllowances.map((lpBalance) => {
@@ -61,7 +63,7 @@ export const fetchFarmUserEarnings = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
     return {
       address: masterChefAdress,
-      name: 'pendingCake',
+      name: 'pendingCmbst',
       params: [farm.pid, account],
     }
   })

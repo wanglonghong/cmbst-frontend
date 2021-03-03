@@ -1,6 +1,6 @@
 import poolsConfig from 'config/constants/pools'
 import sousChefABI from 'config/abi/sousChef.json'
-import cakeABI from 'config/abi/cake.json'
+import combustABI from 'config/abi/combust.json'
 import wbnbABI from 'config/abi/weth.json'
 import { QuoteToken } from 'config/constants/types'
 import multicall from 'utils/multicall'
@@ -56,7 +56,7 @@ export const fetchPoolsTotalStatking = async () => {
     }
   })
 
-  const nonBnbPoolsTotalStaked = await multicall(cakeABI, callsNonBnbPools)
+  const nonBnbPoolsTotalStaked = await multicall(combustABI, callsNonBnbPools)
   const bnbPoolsTotalStaked = await multicall(wbnbABI, callsBnbPools)
 
   return [

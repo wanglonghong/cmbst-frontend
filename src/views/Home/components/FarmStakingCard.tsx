@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Button } from '@zealous4467/cmbstswapuikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
@@ -61,11 +61,11 @@ const FarmedStakingCard = () => {
         </Heading>
         <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(544, 'CAKE to Harvest')}:</Label>
+          <Label>{TranslateString(544, 'COMBUST to Harvest')}:</Label>
           <CakeHarvestBalance />
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'CAKE in Wallet')}:</Label>
+          <Label>{TranslateString(546, 'COMBUST in Wallet')}:</Label>
           <CakeWalletBalance />
         </Block>
         <Actions>
@@ -77,7 +77,7 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting CAKE')
+                ? TranslateString(548, 'Collecting COMBUST')
                 : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (

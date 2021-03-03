@@ -3,12 +3,48 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_pancakeProfileAddress",
+        "name": "_combustProfileAddress",
         "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_maxViewLength",
+        "type": "uint256"
       }
     ],
     "stateMutability": "nonpayable",
     "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "contractAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "thresholdToClaim",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "campaignId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "numberPoints",
+        "type": "uint256"
+      }
+    ],
+    "name": "IFOAdd",
+    "type": "event"
   },
   {
     "anonymous": false,
@@ -38,12 +74,12 @@
       },
       {
         "internalType": "uint256",
-        "name": "_campaignId",
+        "name": "_thresholdToClaim",
         "type": "uint256"
       },
       {
         "internalType": "uint256",
-        "name": "_thresholdToClaim",
+        "name": "_campaignId",
         "type": "uint256"
       },
       {
@@ -149,6 +185,19 @@
   },
   {
     "inputs": [],
+    "name": "maxViewLength",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "owner",
     "outputs": [
       {
@@ -176,6 +225,19 @@
       }
     ],
     "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_newMaxViewLength",
+        "type": "uint256"
+      }
+    ],
+    "name": "updateMaxViewLength",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { getAddress } from 'utils/addressHelpers'
-import { Button, Flex, Text } from '@pancakeswap-libs/uikit'
+import { Button, Flex, Text } from '@zealous4467/cmbstswapuikit'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
@@ -31,6 +31,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = useFarmFromSymbol(farm.lpSymbol)
+
   const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
   const lpAddress = getAddress(lpAddresses)
   const lpName = farm.lpSymbol.toUpperCase()
@@ -73,7 +74,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
       <Flex>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
-          CAKE
+          COMBUST
         </Text>
         <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {TranslateString(1072, 'Earned')}

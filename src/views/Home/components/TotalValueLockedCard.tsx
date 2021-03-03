@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardBody, Heading, Skeleton, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Heading, Skeleton, Text } from '@zealous4467/cmbstswapuikit'
 import useI18n from 'hooks/useI18n'
 import { useGetStats } from 'hooks/api'
 
@@ -23,8 +23,9 @@ const TotalValueLockedCard = () => {
         </Heading>
         {data ? (
           <>
-            <Heading size="xl">{`$${tvl}`}</Heading>
-            <Text color="textSubtle">{TranslateString(764, 'Across all LPs and Syrup Pools')}</Text>
+            {/* <Heading size="xl">{`$${tvl}`}</Heading> */}
+            <Heading size="xl">$0.00</Heading>
+            <Text color="textSubtle">{TranslateString(764, 'Across all LPs and Ash Pools')}</Text>
           </>
         ) : (
           <>
