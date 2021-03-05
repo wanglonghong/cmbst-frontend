@@ -49,7 +49,7 @@ const Coming: React.FC = () => {
         <Button
           variant="secondary"
           as="a"
-          href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfXQLnZ7P8DpNIXnce1VreDiWVmt_Dj9b8nCOorxcX3-Ujjyw/viewform"
           external
           fullWidth
           mb="16px"
@@ -63,7 +63,7 @@ const Coming: React.FC = () => {
         <DetailPlaceholder>
           <div style={{ flex: 1 }}>
             <span role="img" aria-label="ash">
-              🥞{' '}
+              🔥{' '} 
             </span>
             {TranslateString(384, 'Your Stake')}:
           </div>

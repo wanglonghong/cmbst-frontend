@@ -40,15 +40,15 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Github',
-        href: 'https://github.com/combustswap',
+        href: 'https://github.com/CombustFinance',
       },
       {
         label: 'Docs',
-        href: 'https://docs.combustswap.finance',
+        href: 'https://docs.google.com/document/d/1iF1BN545ezXTGqtaA4GVbF-XiMsYRGjHjo21tk9Onx4/edit#heading=h.xoexxnk3ovnp',
       },
       {
         label: 'Blog',
-        href: 'https://combustswap.medium.com',
+        href: 'https://medium.com/@combust_finance',
       },
     ],
   },

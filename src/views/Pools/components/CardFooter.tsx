@@ -69,7 +69,7 @@ const Label = styled.div`
 const TokenLink = styled.a`
   font-size: 14px;
   text-decoration: none;
-  color: #12aab5;
+  color: #ea8c55;
 `
 
 const CardFooter: React.FC<Props> = ({
@@ -103,7 +103,7 @@ const CardFooter: React.FC<Props> = ({
             <FlexFull>
               <Label>
                 <span role="img" aria-label="ash">
-                  🥞{' '}
+                  🔥{' '}
                 </span>
                 {TranslateString(408, 'Total')}
               </Label>
