@@ -35,19 +35,11 @@ const config: MenuEntry[] = [
     icon: 'MoreIcon',
     items: [
       {
-        label: 'Voting',
-        href: 'https://voting.combust.finance',
-      },
-      {
         label: 'Github',
         href: 'https://github.com/CombustFinance',
       },
       {
-        label: 'Docs',
-        href: 'https://docs.google.com/document/d/1iF1BN545ezXTGqtaA4GVbF-XiMsYRGjHjo21tk9Onx4/edit#heading=h.xoexxnk3ovnp',
-      },
-      {
-        label: 'Blog',
+        label: 'Medium',
         href: 'https://medium.com/@combust_finance',
       },
     ],

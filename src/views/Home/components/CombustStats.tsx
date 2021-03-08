@@ -29,7 +29,7 @@ const CombustStats = () => {
   return (
     <StyledCombustStats>
       <CardBody>
-        <Heading size="xl" mb="24px">
+        <Heading color="contrast" size="xl" mb="24px">
           {TranslateString(534, 'Combust Stats')}
         </Heading>
         <Row>

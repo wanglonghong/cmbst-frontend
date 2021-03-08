@@ -79,18 +79,17 @@ export const usePoolFromPid = (sousId): Pool => {
 }
 
 // Prices
-
 export const usePriceBnbBusd = (): BigNumber => {
-  const pid = 2 // BUSD-BNB LP
+  const pid = 1 // COMBUST-BNB LP
+  const combustPriceUSD = usePriceCombustBusd();
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(1).div(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? combustPriceUSD.div(farm.tokenPriceVsQuote) : ZERO
 }
 
-export const usePriceCakeBusd = (): BigNumber => {
-  const pid = 1 // CMBST-BNB LP
-  const bnbPriceUSD = usePriceBnbBusd()
+export const usePriceCombustBusd = (): BigNumber => {
+  const pid = 2 // CMBST-BUSD LP
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? new BigNumber(1).times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceEthBusd = (): BigNumber => {

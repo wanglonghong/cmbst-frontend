@@ -10,7 +10,6 @@ import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/cake-bg.svg');
   background-repeat: no-repeat;
   background-position: top right;
   min-height: 376px;
@@ -56,7 +55,7 @@ const FarmedStakingCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <Heading size="xl" mb="24px">
+        <Heading color="contrast" size="xl" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
         <CardImage src="/images/cake.png" alt="cake logo" width={64} height={64} />

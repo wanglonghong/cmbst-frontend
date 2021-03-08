@@ -11,7 +11,6 @@ import EarnAssetCard from 'views/Home/components/EarnAssetCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/pan-bg-mobile.png');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -75,16 +74,24 @@ const CTACards = styled(BaseLayout)`
   }
 `
 
+const HeaderText = styled.div`
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+`
+
 const Home: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
     <Page>
       <Hero>
-        <Heading as="h1" size="xl" mb="24px" color="secondary">
+        <Heading as="h1" size="xl" mb="24px" color="primary">
           {TranslateString(576, 'CombustSwap')}
         </Heading>
-        <Text>{TranslateString(578, 'A fair launch, more efficient, and sustainable PancakeSwap clone with optimized burn features to prevent token dillution.')}</Text>
+        <HeaderText>{TranslateString(578, 'A fair launch, more efficient, and sustainable PancakeSwap clone ')}</HeaderText>
+        <HeaderText>{TranslateString(578, 'with optimized burn features to prevent token dillution.')}</HeaderText>
       </Hero>
       <div>
         <Cards>

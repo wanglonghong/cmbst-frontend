@@ -18,7 +18,7 @@ const TotalValueLockedCard = () => {
   return (
     <StyledTotalValueLockedCard>
       <CardBody>
-        <Heading size="lg" mb="24px">
+        <Heading color="contrast" size="lg" mb="24px">
           {TranslateString(762, 'Total Value Locked (TVL)')}
         </Heading>
         {data ? (

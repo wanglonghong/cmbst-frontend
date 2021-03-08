@@ -7,7 +7,7 @@ import pools from 'config/constants/pools'
 import { Pool } from 'state/types'
 
 const StyledFarmStakingCard = styled(Card)`
-  background: linear-gradient(#540804, #ea8c55);
+  background: #540804;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -23,7 +23,7 @@ const EarnAssetCard = () => {
   const activeNonCakePools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('CAKE'))
   const latestPools: Pool[] = orderBy(activeNonCakePools, ['sortOrder', 'pid'], ['desc', 'desc']).slice(0, 3)
   // Always include COMBUST
-  const assets = 'COMBUST'  
+  const assets = 'CMBST'  
 
   return (
     <StyledFarmStakingCard>
