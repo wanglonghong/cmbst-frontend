@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Card, CardBody, Heading, Skeleton, Text } from '@zealous4467/cmbstswapuikit'
 import useI18n from 'hooks/useI18n'
 import { useGetStats } from 'hooks/api'
+import { useTotalValue } from '../../../state/hooks'
+import CardValue from './CardValue'
 
 const StyledTotalValueLockedCard = styled(Card)`
   align-items: center;
@@ -13,7 +15,8 @@ const StyledTotalValueLockedCard = styled(Card)`
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   const data = useGetStats()
-  const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
+  const tvl = useTotalValue();
+
 
   return (
     <StyledTotalValueLockedCard>
@@ -23,8 +26,7 @@ const TotalValueLockedCard = () => {
         </Heading>
         {data ? (
           <>
-            {/* <Heading size="xl">{`$${tvl}`}</Heading> */}
-            <Heading size="xl">$0.00</Heading>
+            <CardValue value={tvl.toNumber()} prefix="$" decimals={2}/>
             <Text color="textSubtle">{TranslateString(764, 'Across all LPs and Ash Pools')}</Text>
           </>
         ) : (

@@ -6,6 +6,8 @@ import { Toast, toastTypes } from '@zealous4467/cmbstswapuikit'
 import { useSelector, useDispatch } from 'react-redux'
 import { Team } from 'config/constants/types'
 import useRefresh from 'hooks/useRefresh'
+import { QuoteToken } from '../config/constants/types'
+
 import {
   fetchFarmsPublicDataAsync,
   fetchPoolsPublicDataAsync,
@@ -190,4 +192,26 @@ export const useFetchAchievements = () => {
 export const useAchievements = () => {
   const achievements: AchievementState['data'] = useSelector((state: State) => state.achievements.data)
   return achievements
+}
+
+export const useTotalValue = (): BigNumber => {
+  const farms = useFarms();
+  const bnbPrice = usePriceBnbBusd();
+  const cakePrice = usePriceCombustBusd();
+  let value = new BigNumber(0);
+  for (let i = 0; i < farms.length; i++) {
+    const farm = farms[i]
+    if (farm.lpTotalInQuoteToken) {
+      let val;
+      if (farm.quoteTokenSymbol === QuoteToken.BNB) {
+        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
+      }else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
+        val = (cakePrice.times(farm.lpTotalInQuoteToken));
+      }else{
+        val = (farm.lpTotalInQuoteToken);
+      }
+      value = value.plus(val);
+    }
+  }
+  return value;
 }
