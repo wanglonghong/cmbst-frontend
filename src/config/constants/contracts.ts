@@ -1,19 +1,19 @@
 export default {
   combust: {
     97: '0x5d3a2568c4079eeada9aaa6cbfc5eeea2bfcfa79',
-    56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    56: '0xbE3F4046ca72252F91A6A598F81398065C50059f',
   },
   ash: {
     97: '0x03b05d3C6faB69B7629615E01145272Ee2b55906',
-    56: '0x009cF7bC57584b7998236eff51b98A168DceA9B0',
+    56: '0x4Eb2b9464b00E5aE581a03a74c335b19Fc66e625',
   },
   masterChef: {
     97: '0xe28A04E160AF2E608352090AA7347D8E947d944e',
-    56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+    56: '0xB543A8082294276D3dE730e74fb59f3b8771fc20',
   },
   sousChef: {
     97: '0x2ac53e26757A302154108703b3c6BaAd967c516e',
-    56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
+    56: '0x2627acd6F229e41fe80C5e0B15D3Bce8bff3daae',
   },
   wbnb: {
     97: '0xae13d989dac2f0debff460ac112a837c89baa7cd',

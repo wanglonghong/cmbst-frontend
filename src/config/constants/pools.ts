@@ -5,10 +5,10 @@ const pools: PoolConfig[] = [
     sousId: 0,
     tokenName: 'COMBUST',
     stakingTokenName: QuoteToken.COMBUST,
-    stakingTokenAddress: '0x5d3a2568c4079eeada9aaa6cbfc5eeea2bfcfa79', // COMBUST token
+    stakingTokenAddress: '0xbE3F4046ca72252F91A6A598F81398065C50059f', // COMBUST token
     contractAddress: { // masterChef contract
       97: '0xe28A04E160AF2E608352090AA7347D8E947d944e', 
-      56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+      56: '0xB543A8082294276D3dE730e74fb59f3b8771fc20',
     },
     poolCategory: PoolCategory.CORE,
     projectLink: 'https://combust.finance/',

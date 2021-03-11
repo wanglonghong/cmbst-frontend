@@ -535,6 +535,19 @@
         "inputs": [
             {
                 "internalType": "uint256",
+                "name": "stakingReward",
+                "type": "uint256"
+            }
+        ],
+        "name": "updateStakingReward",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
             },
